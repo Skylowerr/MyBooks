@@ -19,7 +19,7 @@ class Book{
     var rating: Int?
     var status : Status
     
-    init(title: String, author: String, dateAdded: Date = Date.now, dateStarted: Date = Date.distantPast, dateCompleted: Date = Date.distantPast, summary: String, rating: Int?, status: Status) {
+    init(title: String, author: String, dateAdded: Date = Date.now, dateStarted: Date = Date.distantPast, dateCompleted: Date = Date.distantPast, summary: String = "", rating: Int? = 1, status: Status = .onshelf) {
         self.title = title
         self.author = author
         self.dateAdded = dateAdded
