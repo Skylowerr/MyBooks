@@ -28,7 +28,13 @@ struct NewBookView: View {
                 .padding(.vertical)
                 .disabled(title.isEmpty || author.isEmpty)
                 .navigationTitle("New Book")
-                
+                .toolbar{
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button("Cancel"){
+                            dismiss()
+                        }
+                    }
+                }
 
             }
         }

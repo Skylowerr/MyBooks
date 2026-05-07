@@ -14,7 +14,7 @@ struct MyBooksApp: App {
         WindowGroup {
             BookListView()
         }
-        .modelContainer(for: Book.self)
+        .modelContainer(for: Book.self) //Buraya enjekte ettim. Şimdi Contextimi her yerden çekebilirim.
         
     }
     
