@@ -1,51 +1,120 @@
-MyBooks 📚
+# 📚 MyBooks
 
-A simple library application built with SwiftUI and SwiftData to learn modern data persistence and state management in iOS development.
+A personal library tracker iOS app built with **SwiftUI** and **SwiftData** — developed as a hands-on learning project by following the [SwiftData video series by Stewart Lynch](https://www.youtube.com/playlist?list=PLBn01m5Vbs4Ck-JEF2nkcFTF_2rhGBMKX).
 
-🚀 Features
-Add new books
-Edit existing books
-Delete books
-Store data locally using SwiftData
-SwiftUI-based modern UI
-Persistent data management
-Observable data updates
-🛠 Technologies Used
-Swift
-SwiftUI
-SwiftData
-Xcode
-📚 Purpose of the Project
+---
 
-The main purpose of this project is to practice and understand:
+## 📖 About the Project
 
-SwiftData fundamentals
-Data modeling with @Model
-CRUD operations
-SwiftUI + SwiftData integration
-State-driven UI updates
-Modern iOS architecture concepts
+**MyBooks** allows users to track books they want to read, are currently reading, or have already finished. It serves as a practical playground for learning SwiftData — Apple's modern persistence framework introduced at WWDC 2023 — through a real-world use case.
 
-This is a learning-focused project created while studying SwiftData development.
+Rather than a toy example, this app is intentionally built to cover the full breadth of SwiftData features: from basic CRUD operations to relationships, migrations, and iCloud sync.
 
-📷 Screenshots
+---
 
-You can add screenshots here later.
+## ✨ Features
 
-⚙️ Installation
-Clone the repository:
-git clone <your-repository-url>
-Open the project in Xcode.
-Run the app on Simulator or a real device.
-🎯 Learning Resources
+- Add, edit, and delete books from your personal library
+- Track reading status: *Want to Read*, *Currently Reading*, *Finished*
+- Assign genres and authors to books
+- One-to-many and many-to-many relationships between models
+- Dynamic sorting and filtering of book lists
+- Schema migration support for safe model updates
+- iCloud sync via CloudKit integration
+- Preview-friendly model container setup
 
-Tutorial series used during development:
+---
 
-SwiftData Tutorial Playlist by Stewart Lynch
-📌 Notes
+## 🧠 Concepts Covered
 
-This project is created for educational purposes and may continue to evolve as new SwiftData concepts are learned and implemented.
+This project was built step by step through an 11-part video series. The key SwiftData topics explored include:
 
-👨‍💻 Author
+| # | Topic |
+|---|-------|
+| 1 | Project setup & `@Model` macro |
+| 2 | CRUD operations with `ModelContext` |
+| 3 | `ModelContainer` configuration & SwiftUI previews |
+| 4 | Dynamic sorting with `SortDescriptor` |
+| 5 | One-to-many relationships |
+| 6 | Many-to-many relationships |
+| 7 | `@Query` filters and predicates |
+| 8 | Schema migration with `VersionedSchema` |
+| 9 | CloudKit sync setup |
+| 10–11 | Refinements, polish & wrap-up |
 
-Emirhan Gökçe
+---
+
+## 🛠 Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| **SwiftUI** | UI framework |
+| **SwiftData** | Persistence layer |
+| **CloudKit** | iCloud synchronization |
+| **Xcode 15+** | IDE |
+| **iOS 17+** | Minimum deployment target |
+
+---
+
+## 📺 Learning Resource
+
+This app follows the **SwiftData** playlist by [Stewart Lynch](https://www.youtube.com/@StewartLynch) — an 11-video series focused on building a book-tracking app from scratch using SwiftData as the persistence layer.
+
+> 🔗 [Watch the playlist on YouTube](https://www.youtube.com/playlist?list=PLBn01m5Vbs4Ck-JEF2nkcFTF_2rhGBMKX)
+
+Stewart's series is one of the most comprehensive SwiftData tutorials available, covering not just the basics but also relationships, migrations, and CloudKit sync in a real app context.
+
+---
+
+## 🚀 Getting Started
+
+### Requirements
+
+- Xcode 15 or later
+- iOS 17 SDK
+- An Apple Developer account (required for CloudKit features)
+
+### Running the App
+
+1. Clone this repository
+2. Open `MyBooks.xcodeproj` in Xcode
+3. Select a simulator or device running iOS 17+
+4. Build and run (`⌘R`)
+
+> **Note:** To test CloudKit sync, you must be signed into iCloud on your simulator or device and have added the iCloud + CloudKit capability to the project with a valid container.
+
+---
+
+## 📁 Project Structure
+
+```
+MyBooks/
+├── MyBooksApp.swift              # App entry point, ModelContainer setup
+├── Models/
+│   ├── Book.swift                # @Model: Book entity
+│   ├── Author.swift              # @Model: Author entity (one-to-many)
+│   └── Genre.swift               # @Model: Genre entity (many-to-many)
+├── Views/
+│   ├── ContentView.swift         # Main list view with @Query
+│   ├── BookListView.swift        # Filtered & sorted book list
+│   ├── AddEditBookView.swift     # Create / update a book
+│   └── BookDetailView.swift      # Book detail display
+├── Previews/
+│   └── PreviewContainer.swift    # Preview-safe ModelContainer helper
+└── Migrations/
+    └── MigrationPlan.swift       # VersionedSchema & migration stages
+```
+
+---
+
+## 📝 Notes
+
+- This project is **for learning purposes** and follows along with Stewart Lynch's tutorial series.
+- Code may be iteratively updated as new videos in the series are completed.
+- The CloudKit integration requires a real device or a simulator signed into iCloud.
+
+---
+
+## 📄 License
+
+This project is open for personal use and learning. No license is applied — feel free to fork, experiment, and build on it.
