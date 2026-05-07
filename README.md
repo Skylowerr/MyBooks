@@ -32,7 +32,6 @@ This is a learning-focused project created while studying SwiftData development.
 
 You can add screenshots here later.
 
-![Home Screen](screenshots/home.png)
 ⚙️ Installation
 Clone the repository:
 git clone <your-repository-url>
