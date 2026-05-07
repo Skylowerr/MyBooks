@@ -1,6 +1,6 @@
 # 📚 MyBooks
 
-A personal library tracker iOS app built with **SwiftUI** and **SwiftData** — developed as a hands-on learning project by following the [SwiftData video series by Stewart Lynch](https://www.youtube.com/playlist?list=PLBn01m5Vbs4Ck-JEF2nkcFTF_2rhGBMKX).
+A personal library tracker iOS app built with **SwiftUI** and **SwiftData** — developed as a hands-on learning project
 
 ---
 
@@ -56,16 +56,6 @@ This project was built step by step through an 11-part video series. The key Swi
 
 ---
 
-## 📺 Learning Resource
-
-This app follows the **SwiftData** playlist by [Stewart Lynch](https://www.youtube.com/@StewartLynch) — an 11-video series focused on building a book-tracking app from scratch using SwiftData as the persistence layer.
-
-> 🔗 [Watch the playlist on YouTube](https://www.youtube.com/playlist?list=PLBn01m5Vbs4Ck-JEF2nkcFTF_2rhGBMKX)
-
-Stewart's series is one of the most comprehensive SwiftData tutorials available, covering not just the basics but also relationships, migrations, and CloudKit sync in a real app context.
-
----
-
 ## 🚀 Getting Started
 
 ### Requirements
@@ -82,28 +72,6 @@ Stewart's series is one of the most comprehensive SwiftData tutorials available,
 4. Build and run (`⌘R`)
 
 > **Note:** To test CloudKit sync, you must be signed into iCloud on your simulator or device and have added the iCloud + CloudKit capability to the project with a valid container.
-
----
-
-## 📁 Project Structure
-
-```
-MyBooks/
-├── MyBooksApp.swift              # App entry point, ModelContainer setup
-├── Models/
-│   ├── Book.swift                # @Model: Book entity
-│   ├── Author.swift              # @Model: Author entity (one-to-many)
-│   └── Genre.swift               # @Model: Genre entity (many-to-many)
-├── Views/
-│   ├── ContentView.swift         # Main list view with @Query
-│   ├── BookListView.swift        # Filtered & sorted book list
-│   ├── AddEditBookView.swift     # Create / update a book
-│   └── BookDetailView.swift      # Book detail display
-├── Previews/
-│   └── PreviewContainer.swift    # Preview-safe ModelContainer helper
-└── Migrations/
-    └── MigrationPlan.swift       # VersionedSchema & migration stages
-```
 
 ---
 
